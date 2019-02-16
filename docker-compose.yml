@@ -1,0 +1,32 @@
+version: "3"
+services:
+  cache:
+    container_name: cache_db
+    restart: always
+    image: redis:latest
+    ports:
+      - "27018:6379"
+
+  api:
+    container_name: articles-api
+    restart: always
+    build: .
+    ports:
+      - "3000:9000"
+    depends_on:
+      - cache
+    environment:
+      MODE: "production"
+#  db:
+#    image: mongo:latest
+#    container_name: db
+#    ports:
+#      - "27017:27017"
+#  mongoClientTemp:
+#    image: mongo:latest
+#    container_name: mongoClientTemp
+#    links:
+#      - db:db
+#    command: mongo --host 35.238.180.155 --eval  "db.getSiblingDB('bitneni-articles').createUser({user:'dev', pwd:'aprsed14578', roles:[{role:'readWrite',db:'bitneni-articles'}],mechanisms:['SCRAM-SHA-1']});"
+#    depends_on:
+#      - db

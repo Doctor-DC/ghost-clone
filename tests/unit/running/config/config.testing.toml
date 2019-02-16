@@ -1,0 +1,18 @@
+[server]
+mode = "development"
+port = "9000"
+jwt = false
+oauth2 = true
+keys_dir = "/keys"
+
+[database]
+host = "localhost"
+port = "27017"
+username = "***"
+password = "*****"
+name = "articles"
+
+[cache]
+enabled = true
+host = "localhost"
+port = "6379"

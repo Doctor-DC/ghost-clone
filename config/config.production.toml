@@ -1,0 +1,17 @@
+[server]
+port = "9000"
+jwt = true
+oauth2 = true
+keys_dir = "/keys"
+
+[database]
+host = "db_server_ip"
+port = "27017"
+username = "***"
+password = "*****"
+name = "articles"
+
+[cache]
+enabled = true
+host = "cache_server_ip"
+port = "6379"
