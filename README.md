@@ -1,6 +1,8 @@
-# ApiServer
+# Ghost Clone Project WIP
 
-# How to do Unit Tests
+A simple Ghost Articles API Clone project Work In Progress
+
+### How to do Unit Tests
 
 01. clone the repo
 02. go to the repo root directory
